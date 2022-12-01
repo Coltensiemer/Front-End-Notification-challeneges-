@@ -1,0 +1,148 @@
+:root { 
+--White: hsl(0, 0%, 100%);
+--Blue: hsl(219, 85%, 26%); 
+--Verylightgrayishblue: hsl(210, 60%, 98%);
+--Lightgrayishblue1: hsl(211, 68%, 94%);
+--Lightgrayishblue2: hsl(205, 33%, 90%);
+--Grayishblue: hsl(219, 14%, 63%);
+--Darkgrayishblue: hsl(219, 12%, 42%);
+--Verydarkblue: hsl(224, 21%, 14%);
+
+-Fontsize: (paragraph): 16px; 
+}
+
+
+* 
+{ 
+    color: var(--Grayishblue); 
+}
+body { 
+    margin: auto;
+    background-color: var(--Verylightgrayishblue);
+}
+
+main { 
+    max-width: 500px;
+    padding: 40px;
+    margin: auto;
+    background-color: var(--White);
+
+}
+
+
+#notification-container{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  
+}
+
+#notification-container>div { 
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+}
+
+#notification-container>div>h1 { 
+    color: black; 
+}
+
+#notification-container>div>p { 
+    text-align: center;
+    background-color: var(--Blue);
+    color: var(--White); 
+    font-size: 20px;
+    height: 20px;
+    width: 25px;
+    padding: .25em;
+    border-radius: 20%;
+
+}
+
+#notification-container>h2 { 
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+
+
+main>section{
+     display: flex;
+     flex-direction: column;
+
+}
+
+img { 
+    position: relative;
+    top: 10px; 
+    height: 40px; 
+    width: 40px;
+    padding-right: 10px;
+}
+
+
+
+
+.names { 
+    font-weight: bold;
+    color: black
+}
+.timelines { 
+    font-weight: 300;
+   
+}
+
+
+.user-comment { 
+    border: 1px var(--Lightgrayishblue2) solid; 
+    padding: 1em;
+
+}
+
+
+.profile-container {
+    display: grid; 
+    grid-template-columns: 0.1fr .8fr; 
+    grid-template-rows: .1fr .1fr; 
+    grid-template-areas: 
+      "One Two two"
+      "One three five"
+      "one three four"; 
+      align-content: start;
+  }
+  .one { grid-area: one;}
+  .two { grid-area: two;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". five five"
+      ". five five"
+      ". . .";  }
+  .three { 
+    grid-area: three;
+}
+  .four {grid-area: four;}
+  .five{grid-area: five;}
+
+
+  .chess { 
+    font-weight: 800;
+    color: var(--Blue);
+  }
+
+
+/* Notification  */
+
+.active { 
+    background-color: var(--Lightgrayishblue1);
+
+
+}
+
+.active:hover { 
+    cursor: pointer;
+}
