@@ -1,4 +1,5 @@
 :root { 
+--red:hsl(1, 90%, 64%); 
 --White: hsl(0, 0%, 100%);
 --Blue: hsl(219, 85%, 26%); 
 --Verylightgrayishblue: hsl(210, 60%, 98%);
@@ -33,7 +34,7 @@ main {
 #notification-container{ 
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+        align-items: baseline;
     flex-wrap: nowrap;
   
 }
@@ -60,19 +61,19 @@ main {
 
 }
 
-#notification-container>h2 { 
+#notification-container>button { 
     font-weight: 500;
     font-size: 18px;
+    border: none; 
+    background-color: var(--White);
+}
+
+#notification-container>button:hover { 
+    cursor: pointer;
 }
 
 
 
-
-main>section{
-     display: flex;
-     flex-direction: column;
-
-}
 
 img { 
     position: relative;
@@ -89,9 +90,24 @@ img {
     font-weight: bold;
     color: black
 }
-.timelines { 
+.timeline { 
+    position: relative;
+    top: -10px;
     font-weight: 300;
+    margin: 0;
+    padding: 0;
    
+}
+
+.profile-content::after{ 
+    content: " ";
+    position: relative;
+    left: 5px; 
+    display: inline-block; 
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: var(--red)
 }
 
 
@@ -101,16 +117,21 @@ img {
 
 }
 
+.user-comment:hover {
+    cursor: pointer;
+}
 
+/* GRID SYSTEM */
 .profile-container {
+    width: 100%;
     display: grid; 
-    grid-template-columns: 0.1fr .8fr; 
+    grid-template-columns:.1fr 1fr; 
     grid-template-rows: .1fr .1fr; 
     grid-template-areas: 
       "One Two two"
       "One three five"
       "one three four"; 
-      align-content: start;
+     
   }
   .one { grid-area: one;}
   .two { grid-area: two;
@@ -119,8 +140,8 @@ img {
     grid-template-rows: 1fr 1fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-      ". five five"
-      ". five five"
+      ". five"
+      ". five"
       ". . .";  }
   .three { 
     grid-area: three;
@@ -134,15 +155,17 @@ img {
     color: var(--Blue);
   }
 
+  .attachment:hover {
+    cursor: pointer;
+  }
 
 /* Notification  */
 
 .active { 
     background-color: var(--Lightgrayishblue1);
-
-
 }
 
 .active:hover { 
     cursor: pointer;
 }
+
