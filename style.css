@@ -9,12 +9,21 @@
 --Darkgrayishblue: hsl(219, 12%, 42%);
 --Verydarkblue: hsl(224, 21%, 14%);
 
--Fontsize: (paragraph): 16px; 
+-Fontsize:16px; 
+}
+
+@font-face {
+    font-family: Plus_Jakarta_Sans ;
+    font-style: normal;
+    font-weight: 500;
+    src: url(/Front-End-Notification-challeneges-/PlusJakartaSans-VariableFont_wght.ttf);
 }
 
 
 * 
 { 
+ font-family: 'Plus_Jakarta_Sans'; 
+    
     color: var(--Grayishblue); 
 }
 body { 
@@ -90,6 +99,11 @@ img {
     font-weight: bold;
     color: black
 }
+
+.names:hover{
+    cursor: pointer;
+    color: var(--Blue) !important;
+}
 .timeline { 
     position: relative;
     top: -10px;
@@ -98,17 +112,21 @@ img {
     padding: 0;
    
 }
+.hidden{
+    display: none !important;
+}
 
-.profile-content::after{ 
-    content: " ";
-    position: relative;
-    left: 5px; 
+
+.span-dot { 
     display: inline-block; 
     height: 6px;
     width: 6px;
     border-radius: 50%;
     background: var(--red)
 }
+
+
+
 
 
 .user-comment { 
@@ -150,10 +168,22 @@ img {
   .five{grid-area: five;}
 
 
-  .chess { 
-    font-weight: 800;
+a:link { 
     color: var(--Blue);
+    text-decoration: none;
+}
+
+  a:active { 
+    color: var(--Blue);
+    text-decoration: none;
   }
+  a:visited { 
+    color: var(--Grayishblue);
+    text-decoration: none;
+  }
+
+
+ 
 
   .attachment:hover {
     cursor: pointer;
